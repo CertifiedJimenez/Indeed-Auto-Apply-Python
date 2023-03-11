@@ -73,4 +73,29 @@ returns = [['https://uk.indeed.com/pagead/clk?mo=r&ad=-6NYlbfkN0BFWKp4myphoz2RoA
 
 ```
 
+# Apply Engine
+In the python code you'll find a Apply engine class.
+
+## Defualt Apply
+
+The Default Apply function runs the application and initiates the client's job posting application process. It uses the rules specified in the 'config.json' file to determine the relevance of each job posting. While this method is not perfect and can be improved, its accuracy depends on the quality of the rules in the configuration file.
+
+The rules in the configuration file have four primary fields. The 'rule' field is used to reference the identifer on the Excel sheet or filter params. The 'must' field contains essential words that must match to pass the validation check. If no words match, the job posting will be deemed irrelevant regardless of other keywords. The 'keywords' field lists words that must be present in the job description for it to be considered relevant. The 'ignore' field contains a blacklist of words. If any of these words appear in the job description, the posting will automatically be deemed irrelevant, similar to the 'must' field.
+
+### Config.Json
+```
+    "Filter": [
+        { "rules": 
+            {
+                "rule": 1,
+                "Must": ["Flask","Remote"],
+                "Keywords": ["CSS","HTML","Flask","Django","Jquery","Javascript"],
+                "Ignore": ["Senior","On site", "Noodles"]
+            }
+            
+        }
+    ]
+```
+
+
 
