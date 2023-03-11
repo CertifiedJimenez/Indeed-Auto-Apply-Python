@@ -90,8 +90,6 @@ The rules in the configuration file have four primary fields:
 
 4. The 'ignore' field contains a blacklist of words. If any of these words appear in the job description, the posting will automatically be deemed irrelevant, similar to the 'must' field.
 
-You can also have mutiple rule fields. 
-
 
 ### Config.Json
 ```
@@ -104,7 +102,7 @@ You can also have mutiple rule fields.
                 "Ignore": ["Senior","On site", "Noodles"]
             },
                         {
-                "rule": 1,
+                "rule": 2,
                 "Must": ["Javascript","Norwich"],
                 "Keywords": ["CSS","HTML","React","Jquery","Javascript"],
                 "Ignore": ["Senior","On site", "Chicken"]
