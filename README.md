@@ -80,7 +80,18 @@ In the python code you'll find a Apply engine class.
 
 The Default Apply function runs the application and initiates the client's job posting application process. It uses the rules specified in the 'config.json' file to determine the relevance of each job posting. While this method is not perfect and can be improved, its accuracy depends on the quality of the rules in the configuration file.
 
-The rules in the configuration file have four primary fields. The 'rule' field is used to reference the identifer on the Excel sheet or filter params. The 'must' field contains essential words that must match to pass the validation check. If no words match, the job posting will be deemed irrelevant regardless of other keywords. The 'keywords' field lists words that must be present in the job description for it to be considered relevant. The 'ignore' field contains a blacklist of words. If any of these words appear in the job description, the posting will automatically be deemed irrelevant, similar to the 'must' field.
+The rules in the configuration file have four primary fields:
+
+    1. The 'rule' field is used to reference the identifer on the Excel sheet or filter params. 
+
+    2. The 'must' field contains essential words that must match to pass the validation check. If no words match, the job posting will be deemed irrelevant regardless of other keywords. 
+
+    3. The 'keywords' field lists words that must be present in the job description for it to be considered relevant. 
+
+    4. The 'ignore' field contains a blacklist of words. If any of these words appear in the job description, the posting will automatically be deemed irrelevant, similar to the 'must' field.
+
+You can also have mutiple rule fields. 
+
 
 ### Config.Json
 ```
@@ -88,9 +99,15 @@ The rules in the configuration file have four primary fields. The 'rule' field i
         { "rules": 
             {
                 "rule": 1,
-                "Must": ["Flask","Remote"],
+                "Must": ["Flask","London"],
                 "Keywords": ["CSS","HTML","Flask","Django","Jquery","Javascript"],
                 "Ignore": ["Senior","On site", "Noodles"]
+            },
+                        {
+                "rule": 1,
+                "Must": ["Javascript","Norwich"],
+                "Keywords": ["CSS","HTML","React","Jquery","Javascript"],
+                "Ignore": ["Senior","On site", "Chicken"]
             }
             
         }
