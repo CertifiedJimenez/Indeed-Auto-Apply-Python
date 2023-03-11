@@ -1,6 +1,9 @@
 # Indeed-Auto-Apply-Python
 This is an indeed apply automated program that applies for jobs. 
 
+![Alt Text](https://giphy.com/gifs/quLdspjzl02UkpxpCS)
+
+
 
 # Search Engine
 In the python code you'll find a search engine class.
