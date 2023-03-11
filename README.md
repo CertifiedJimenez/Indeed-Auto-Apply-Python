@@ -80,6 +80,9 @@ In the python code you'll find a Apply engine class. When ever you call a functi
 
 The Default Apply function runs the application and initiates the client's job posting application process. It uses the rules specified in the 'config.json' file to determine the relevance of each job posting. While this method is not perfect and can be improved, its accuracy depends on the quality of the rules in the configuration file.
 
+When applied for the job the excel will update and have the show the status of the jobs to either be applied or cancelled.
+The link in the jobs will mean if it has the easy apply button if it doesn't it will return false else it will return true.
+
 The rules in the configuration file have four primary fields:
 
 1. The 'rule' field is used to reference the identifer on the Excel sheet or filter params. 
@@ -112,10 +115,11 @@ The rules in the configuration file have four primary fields:
     ]
 ```
 
+### IndeedScrape.py
 ```
 ApplyEngine.DefaultApply(console)
 
-retunrs [['https://uk.indeed.com/pagead/clk?mo=r&ad=-6NYlbfkN0BFWKp4myphoz2RoAbLi7EmRheur09jFeUtvXr9Yhoy_xVV6RfQV5j6p1bFfTvlS-wziuEeh6TaoOw5lmceiomE3X7IA0CI9JliF2TAqzjAr2J335YUWLB-R-YKtuXj0JY3EA4Rc5vbrMUc3nAC8UHE6YTcnro-aKwNr9X6UAAd_zZ3jlIfpzrHCe72frZ-5ioaOMheDk66nY4G_1J3hqhrV7Hv66vAzMBFOl2pRXQ-cFAHjOotFrs291hwruXwMwLTD7Gf9Zk7p-FNlxNTqnnOA4rfFXMpWws-s8iGzfDwPobjr3HJ86bQpgHnrxBX3NDpNxyoEHHKj4kaYAY2rd74Znro8uTsf5x553M_5AWSdG1coC9CiZFKMKXFlF4QZYIcXRNTUMvkmXIj0MtMYmYJFxDf2E81dr-DdmZEO_qBiX13J6bKpq6lW-VrUB8bd9GZKuJnPA2eW19m34-cPGi15FFVHUCgFJvRSRvSk6eWnkICJk4Xrnhc8gJv1-OhLKZReDfFypceSq3fXLhV3i86ISckNZTIed3weS-1t5Ak_Q==&xkcb=SoCw-_M3SpGJsJWHER0IbzkdCdPP&p=0&fvj=1&vjs=3'],['https://uk.indeed.com/pagead/clk?mo=r&ad=-6NYlbfkN0BFWKp4myphoz2RoAbLi7EmRheur09jFeUtvXr9Yhoy_xVV6RfQV5j6p1bFfTvlS-wziuEeh6TaoOw5lmceiomE3X7IA0CI9JliF2TAqzjAr2J335YUWLB-R-YKtuXj0JY3EA4Rc5vbrMUc3nAC8UHE6YTcnro-aKwNr9X6UAAd_zZ3jlIfpzrHCe72frZ-5ioaOMheDk66nY4G_1J3hqhrV7Hv66vAzMBFOl2pRXQ-cFAHjOotFrs291hwruXwMwLTD7Gf9Zk7p-FNlxNTqnnOA4rfFXMpWws-s8iGzfDwPobjr3HJ86bQpgHnrxBX3NDpNxyoEHHKj4kaYAY2rd74Znro8uTsf5x553M_5AWSdG1coC9CiZFKMKXFlF4QZYIcXRNTUMvkmXIj0MtMYmYJFxDf2E81dr-DdmZEO_qBiX13J6bKpq6lW-VrUB8bd9GZKuJnPA2eW19m34-cPGi15FFVHUCgFJvRSRvSk6eWnkICJk4Xrnhc8gJv1-OhLKZReDfFypceSq3fXLhV3i86ISckNZTIed3weS-1t5Ak_Q==&xkcb=SoCw-_M3SpGJsJWHER0IbzkdCdPP&p=0&fvj=1&vjs=3']]
+returns = [['https://uk.indeed.com/pagead/clk?mo=r&ad=-6NYlbfkN0BFWKp4myphoz2RoAbLi7EmRheur09jFeUtvXr9Yhoy_xVV6RfQV5j6p1bFfTvlS-wziuEeh6TaoOw5lmceiomE3X7IA0CI9JliF2TAqzjAr2J335YUWLB-R-YKtuXj0JY3EA4Rc5vbrMUc3nAC8UHE6YTcnro-aKwNr9X6UAAd_zZ3jlIfpzrHCe72frZ-5ioaOMheDk66nY4G_1J3hqhrV7Hv66vAzMBFOl2pRXQ-cFAHjOotFrs291hwruXwMwLTD7Gf9Zk7p-FNlxNTqnnOA4rfFXMpWws-s8iGzfDwPobjr3HJ86bQpgHnrxBX3NDpNxyoEHHKj4kaYAY2rd74Znro8uTsf5x553M_5AWSdG1coC9CiZFKMKXFlF4QZYIcXRNTUMvkmXIj0MtMYmYJFxDf2E81dr-DdmZEO_qBiX13J6bKpq6lW-VrUB8bd9GZKuJnPA2eW19m34-cPGi15FFVHUCgFJvRSRvSk6eWnkICJk4Xrnhc8gJv1-OhLKZReDfFypceSq3fXLhV3i86ISckNZTIed3weS-1t5Ak_Q==&xkcb=SoCw-_M3SpGJsJWHER0IbzkdCdPP&p=0&fvj=1&vjs=3'],['https://uk.indeed.com/pagead/clk?mo=r&ad=-6NYlbfkN0BFWKp4myphoz2RoAbLi7EmRheur09jFeUtvXr9Yhoy_xVV6RfQV5j6p1bFfTvlS-wziuEeh6TaoOw5lmceiomE3X7IA0CI9JliF2TAqzjAr2J335YUWLB-R-YKtuXj0JY3EA4Rc5vbrMUc3nAC8UHE6YTcnro-aKwNr9X6UAAd_zZ3jlIfpzrHCe72frZ-5ioaOMheDk66nY4G_1J3hqhrV7Hv66vAzMBFOl2pRXQ-cFAHjOotFrs291hwruXwMwLTD7Gf9Zk7p-FNlxNTqnnOA4rfFXMpWws-s8iGzfDwPobjr3HJ86bQpgHnrxBX3NDpNxyoEHHKj4kaYAY2rd74Znro8uTsf5x553M_5AWSdG1coC9CiZFKMKXFlF4QZYIcXRNTUMvkmXIj0MtMYmYJFxDf2E81dr-DdmZEO_qBiX13J6bKpq6lW-VrUB8bd9GZKuJnPA2eW19m34-cPGi15FFVHUCgFJvRSRvSk6eWnkICJk4Xrnhc8gJv1-OhLKZReDfFypceSq3fXLhV3i86ISckNZTIed3weS-1t5Ak_Q==&xkcb=SoCw-_M3SpGJsJWHER0IbzkdCdPP&p=0&fvj=1&vjs=3']]
 
 ```
 
