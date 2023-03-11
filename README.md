@@ -14,6 +14,8 @@ In the 'config.json' file, you can customize your search criteria. Here, you def
 
 You can also create multiple searches. In this example, I am searching for a Flask developer job in London and a JavaScript job in Norwich with different rule IDs.
 
+
+### Config.Json
 ```
     {
     "Search": [
@@ -32,11 +34,12 @@ You can also create multiple searches. In this example, I am searching for a Fla
                 "Location": "Norwich"
             }
             
-        }
+        }]
      }
 ```
 
 
+### IndeedScrape.py
 ```
 SearchEngine.DefualtSearch(console, 20)
 
