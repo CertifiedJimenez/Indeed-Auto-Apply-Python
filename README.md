@@ -1,7 +1,7 @@
 # Indeed-Auto-Apply-Python
 This is an indeed apply automated program that applies for jobs. 
 
-![Alt Text](https://giphy.com/gifs/quLdspjzl02UkpxpCS)
+![Alt Text](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZjJmMzRhODUzZGNkMzBmYzcxNmZlNTY4YTdhY2M4MDIzMjllYjA4MSZjdD1n/quLdspjzl02UkpxpCS/giphy.gif)
 
 
 
