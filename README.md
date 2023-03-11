@@ -6,7 +6,7 @@ This is an indeed apply automated program that applies for jobs.
 In the python code you'll find a search engine class.
 With this you have access to 3 types of functions. All of them will return a list of all the jobs the app has scraped.
 
-##Custom Search
+## Custom Search
 
 Custom search allows the user to specify search criteria, such as job title and location, as well as the number of pages to be scraped. Furthermore, the program offers the option to set search rules that will be saved in an Excel file, enabling the user to retrieve and analyze the data at a later time.
 
