@@ -1,22 +1,15 @@
-from selenium import webdriver
 import json
-import yaml
 import os
 import time
-import openpyxl
 import pandas as pd
+from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.by import By
-import math
-from bs4 import BeautifulSoup
-import requests
 
 
 
 
 class ScraperConfig:
-
-
     def __init__(self, driver_path='msedgedriver.exe', authentication_file='/cookies/authentication.json', url='https://uk.indeed.com'):
         self.driver = None
         self.authentication = os.path.isfile('auth.json')
@@ -342,9 +335,8 @@ class SearchEngine:
 
 
 console = ScraperConfig()
-easy = SearchEngine.CustomSearch(console, 'Flask', 'London', 5, 1)
-print(easy)
-# ApplyEngine.DefaultApply(console)
+SearchEngine.DefualtSearch(console, 20)
+
 
 
 
