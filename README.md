@@ -20,7 +20,7 @@ $ pip install -r requirements.txt
 In the python code you'll find a search engine class.
 With this you have access to 3 types of functions. All of them will return a list of all the jobs the app has scraped.
 
-## Defualt Search
+## Default Search
 
 Default search is a search without any specific criteria. The only parameter it takes is the number of pages to scrape. All other information required for the search to run is located in the 'config.json' file.
 
@@ -86,7 +86,7 @@ returns = [['https://uk.indeed.com/pagead/clk?mo=r&ad=-6NYlbfkN0BFWKp4myphoz2RoA
 # Apply Engine
 In the python code you'll find a Apply engine class. When ever you call a function it will alaways return a 2D list. In the first row you will see all the applied and confirmed listings and on the other you will find failed or couldn't be listings.
 
-## Defualt Apply
+## Default Apply
 
 The Default Apply function runs the application and initiates the client's job posting application process. It uses the rules specified in the 'config.json' file to determine the relevance of each job posting. While this method is not perfect and can be improved, its accuracy depends on the quality of the rules in the configuration file.
 
