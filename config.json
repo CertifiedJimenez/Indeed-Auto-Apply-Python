@@ -1,0 +1,23 @@
+{
+    "Search": [
+        { "Role": 
+            {
+                "rule": 0,
+                "Title": "Accountant",
+                "Location": "London"
+            }
+            
+        }
+    ], 
+    "Filter": [
+        { "rules": 
+            {
+                "rule": 0,
+                "Must": ["Finance"],
+                "Keywords": ["CSV","Excel"],
+                "Ignore": ["Microsoft Powerpoint ","Software Engineer"]
+            }
+            
+        }
+    ]
+}
