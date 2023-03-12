@@ -74,7 +74,7 @@ returns = [['https://uk.indeed.com/pagead/clk?mo=r&ad=-6NYlbfkN0BFWKp4myphoz2RoA
 
 ## Direct Search
 
-Direct Search enables users to specify search criteria such as job title and location, and directly displays the specific page of interest. Additionally, users can set search rules that will be saved in an Excel file for future reference and analysis. For instance, if a user specifies they want to access one page on Indeed up to page 5, Direct Search will return those specific pages and exclude any extraneous results.
+Direct Search enables users to specify search criteria such as job title and location, and directly displays the specific page of interest. Additionally, users can set search rules that will be saved in an Excel file for future reference and analysis. For instance, if a user specifies they want to access one page on Indeed, Direct Search will return that specific page.
 
 ```
 SearchEngine.DirectSearch(console, 'Flask', 'London', 5, 1)
