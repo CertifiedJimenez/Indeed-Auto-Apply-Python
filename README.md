@@ -43,7 +43,7 @@ You can also create multiple searches. In this example, I am searching for a Fla
 ```
 
 
-### IndeedScrape.py
+### Main.py
 ```
 SearchEngine.DefualtSearch(console, 20)
 
@@ -115,7 +115,7 @@ The rules in the configuration file have four primary fields:
     ]
 ```
 
-### IndeedScrape.py
+### Main.py
 ```
 ApplyEngine.DefaultApply(console)
 
