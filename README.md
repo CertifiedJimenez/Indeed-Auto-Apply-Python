@@ -8,7 +8,12 @@ This uses the microsft's edge Web driver and selenium to be able to work.
 To get the application running you will need to download the microsft edge webdriver. 
 You can [get the web driver here.](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/)
 
-Once installed then make sure the executable is in the same file as main.py
+Once installed then make sure the executable is in the same file as main.py When you are finished then you need to download the dependancies.
+Make sure you type this code in your python terminal to download the requirements.
+
+```
+$ pip install -r requirements.txt
+```
 
 # Search Engine
 In the python code you'll find a search engine class.
