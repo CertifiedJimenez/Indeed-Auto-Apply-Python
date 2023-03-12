@@ -11,6 +11,7 @@ You can [get the web driver here.](https://developer.microsoft.com/en-us/microso
 Once installed then make sure the executable is in the same file as main.py When you are finished then you need to download the dependancies.
 Make sure you type this code in your python terminal to download the requirements.
 
+## Installation
 ```
 $ pip install -r requirements.txt
 ```
