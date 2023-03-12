@@ -1,11 +1,11 @@
 # Indeed-Auto-Apply-Python
-This is an indeed apply automated program that applies for jobs.
-This uses the microsft's edge Web driver and selenium to be able to work.
+This is an indeed automated program that applies for jobs.
+This uses the microsoft's edge Web driver and selenium to be able to work.
 
 ![Alt Text](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZjJmMzRhODUzZGNkMzBmYzcxNmZlNTY4YTdhY2M4MDIzMjllYjA4MSZjdD1n/quLdspjzl02UkpxpCS/giphy.gif)
 
 # Setup
-To get the application running you will need to download the microsft edge webdriver. 
+To get the application running you will need to download the microsoft edge webdriver.
 You can [get the web driver here.](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/)
 
 Once installed then make sure the executable is in the same file as main.py When you are finished then you need to download the dependancies.
