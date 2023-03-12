@@ -84,7 +84,7 @@ returns = [['https://uk.indeed.com/pagead/clk?mo=r&ad=-6NYlbfkN0BFWKp4myphoz2RoA
 ```
 
 # Apply Engine
-In the python code you'll find a Apply engine class. When ever you call a function it will alaways return a 2D list. In the first row you will see all the applied and confirmed listings and on the other you will find failed or couldn't be listings.
+In the python code you'll find a Apply engine class. When ever you call a function it will always return a 2D list. In the first row you will see all the applied and confirmed listings and on the other you will find failed or couldn't be listings.
 
 ## Default Apply
 
