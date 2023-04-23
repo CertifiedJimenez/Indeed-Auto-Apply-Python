@@ -1,4 +1,4 @@
-# Indeed-Auto-Apply-Python
+# Indeed-Web-Scraper-Python
 This is an indeed automated program that applies for jobs.
 This uses the microsoft's edge Web driver and selenium to be able to work.
 
