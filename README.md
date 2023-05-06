@@ -71,29 +71,47 @@ This method relies on certain keywords appearing in the job description, so it m
  
  The IndeedScraper class is a web scraper that extracts information from the Indeed job listing website (https://uk.indeed.com). It is a subclass of the EdgeWebDriver class and is implemented using the Microsoft Edge WebDriver.
  
-```scrape_direct_page_index(self, Title: str, Location: str, Page: int) -> list[str]:```
+ ### Make a specific search
+ 
+```python
+ scrape_direct_page_index(self, Title: str, Location: str, Page: int) -> list[str]:
+```
+ 
 Scrapes the job listings from a specific page number on the Indeed website based on the search `Title`, `Location`, and `Page number`. Returns a list of URLs for the found listings.
  
-```scrape_bundle_pages(self, Title, Location, MaxPages: int) -> list[str]:```
+### Make a custom search 
+
+```python
+scrape_bundle_pages(self, Title, Location, MaxPages: int) -> list[str]:
+```
+ 
  Scrapes job listings from multiple pages on the Indeed website based on the search `Title`, `Location`, and the `MaxPages` to search to. 
  Returns a list of URLs for the found listings.
- 
- 
-```scrape_config_pages(self) -> list[str]:``` 
+
+### Make a custom search url based on config.yml
+
+```
+scrape_config_pages(self) -> list[str]:
+ ``` 
  Scrapes job listings from the Indeed website based on the custom search configurations stored in the `'config.yaml'` file. Returns a list of URLs for the found listings.
 
- ```
+  ### Extract one job posting page
+
+ ```python
  scrape_job_listing(self, link: str) -> dict:
  ```
 
 Extracts job details from a given job page URL and returns them as a dictionary. The link argument is the URL of the job page to extract information from. Returns a dictionary containing job details such as the job `title`, `company`, `location`, `salary`, `job type`, `shift schedule`, `job qualifications`, `job benefits`, `job description`, and `hiring insights` or other relevant information.
  
- ```
+ ### Extract multiple job posting pages
+
+ ```python
 scrape_multiple_job_listing(self, jobs: list[str]) -> list[dict]:
 ```
 Extracts job details from multiple given job page URLs and returns them as a list of dictionaries. The jobs argument is a list of URLs of job pages to extract information from. Returns a list of dictionaries containing job details such as the `job title`, `company`, `location`, `salary`, `job type`, `shift schedule`, `job qualifications`, `job benefits`, `job description`, and `hiring insights` or other relevant information.
- 
- ```
+
+ ### Get the config yml
+```python
 _getConfig(self) -> dict:
 ``` 
 Reads and returns the configuration from the 'config.yaml' file for custom searches. Returns an empty dictionary if the file is empty or not found.
