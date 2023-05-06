@@ -90,7 +90,7 @@ scrape_bundle_pages(self, Title, Location, MaxPages: int) -> list[str]:
 
 ### Make a custom search url based on config.yml
 
-```
+```python
 scrape_config_pages(self) -> list[str]:
  ``` 
  Scrapes job listings from the Indeed website based on the custom search configurations stored in the `'config.yaml'` file. Returns a list of URLs for the found listings.
@@ -116,6 +116,8 @@ _getConfig(self) -> dict:
 ``` 
 Reads and returns the configuration from the 'config.yaml' file for custom searches. Returns an empty dictionary if the file is empty or not found.
 
+ ### Note
+This method relies on certain keywords appearing in the job description, so it may not always extract all the details correctly. Additionally, it may not work for all job postings.
 
 
 
