@@ -67,6 +67,7 @@ It then stores these details in a dictionary and returns it.
 ### Note
 This method relies on certain keywords appearing in the job description, so it may not always extract all the details correctly. Additionally, it may not work for all job postings.
  
+ <br>
  ## IndeedScraper Class
  
  The IndeedScraper class is a web scraper that extracts information from the Indeed job listing website (https://uk.indeed.com). It is a subclass of the EdgeWebDriver class and is implemented using the Microsoft Edge WebDriver.
