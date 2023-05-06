@@ -46,8 +46,7 @@ get_job_details(self, url) -> dict
 ``` 
     
 A method that extracts job details from a given job page URL and returns them as a dictionary. It takes a single parameter:
-
-``url:`` The URL of the job page to extract information from.<br>
+``url:`` The URL of the job page to extract information from.
 It then retrieves the full job description from the page and uses regular expressions to extract the following details:
 <br>
     
