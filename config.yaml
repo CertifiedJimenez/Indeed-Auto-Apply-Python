@@ -1,0 +1,8 @@
+jobs:
+
+  - title: Django
+    location: London
+    pages: 1
+    must_include: ["Finance"]
+    keywords: ["CSV", "Excel"]
+    ignore: ["Microsoft Powerpoint", "Software Engineer"]
