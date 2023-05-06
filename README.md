@@ -18,39 +18,38 @@ $ pip install -r requirements.txt
 
 ## EdgeWebDriver class
 The EdgeWebDriver class provides a set of methods to scrape job postings from Indeed's job portal. It has the following methods:
-<br>
-```
+
+### Initialisation
+```python
 __init__(self, driver_path='msedgedriver.exe', url='https://uk.indeed.com')
 ``` 
 The constructor method that initializes the EdgeWebDriver instance. It takes two optional parameters: <br>`driver_path:` The path to the msedgedriver.exe file (default: 'msedgedriver.exe').<br>`url:` The URL of the website to scrape (default: 'https://uk.indeed.com').
-
-<br>
-
-``` 
+```python
 launch(self) -> None
 ``` 
 
 A method that launches the Edge web driver with the specified path and website. It uses the webdriver.Edge method to create a new instance of the Edge browser, and then navigates to the specified URL. If an error occurs during the launching process, it prints an error message.
 
-<br>
+### Get job posting urls on searches
 
-``` 
+```python 
  get_url_patterns(self, url) -> list[str]
 ``` 
 
-A method that scrapes all the job posting URLs from a given webpage. It takes a single parameter: `url:` The URL of the webpage to read listings from.<br>
+A method that scrapes all the job posting URLs from a given webpage. It takes a single parameter: `url:` The URL of the webpage to read listings from.
 It then retrieves all the <a> tags on the page, and checks if they contain '/clk' or '/company'. If they do, it appends the URL to a list of URLs, which it then returns.
 
-```
+
+### Get job posting information
+```python
 get_job_details(self, url) -> dict
 ``` 
     
 A method that extracts job details from a given job page URL and returns them as a dictionary. It takes a single parameter:
 ``url:`` The URL of the job page to extract information from.
 It then retrieves the full job description from the page and uses regular expressions to extract the following details:
-<br>
-    
- ```
+
+```
 'title': The title of the job.
 'company': The company offering the job.
 'location' The location for the job.
